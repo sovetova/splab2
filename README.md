@@ -1,5 +1,4 @@
 ## splab2 - forking processes
-###### \[deadline is week06 labtime, October 8-12, 2018 \]
 
 ### Aim
 - To master process creation system calls
