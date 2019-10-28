@@ -3,10 +3,10 @@
 ### Aim
 - To master process creation system calls
 
-### Tasks
-- solve several small tasks that use `fork`, `exec*`, `waitpid`, `exit` UNIX/Linux system calls.
+### Problem
+- solve several small problems to learn `fork`, `exec*`, `waitpid`, `exit` UNIX/Linux system calls.
 
-## DOMATH
+## 1. DOMATH
 Write a program `domath.c` and compile it as `domath`. The program should accept **two** arguments, create **four** child processes and pass the arguments to the child processes. Each of the child processes should perfom an arithmetic operation over the arguments (like addition, subtraction, multiplication or division) as shown below. File `domath.c` should contain code of parent process and all its child processes.
 
 ```
@@ -19,8 +19,8 @@ child4: 3/5=0
 parent: done.
 ```
 
-## MATHDO
-Write a program `mathdo.c` that will take the same arguments as in the previous task and create **four** child processes. Unlike the previous task this task does not want the parent process to contain code for all its child processes. Instead the parent process spawns child processes written in other programming languages. Let `python` script do addition, a `java` program do subtraction, `nodejs` script do multiplication and a `bash` script do division. (they may need to be installed to your system first)
+## 2. MATHDO
+Write a program `mathdo.c` that will take the same arguments as in the previous problem and create **four** child processes. Unlike the previous problem, in this problem the parent process does not contain code for all its child processes. Instead the parent process spawns child processes written in other programming languages. Let `python` script do addition, a `java` program do subtraction, `nodejs` script do multiplication and a `bash` script do division. (they may need to be installed to your system first)
 
 ```
 $ gcc mathdo.c -o mathdo
@@ -32,7 +32,7 @@ bash: 3/5=0
 parent: done.
 ```
 
-## SHELL
+## 3. SHELL
 Write a program `shell.c` that repeatedly (in a loop) prompts user for a command, reads the command and executes it in a child process. If a user prints `&` in the end of a command your program should run the command as a child process in the background. When user enters `exit` command your program should exit.
 
 ```
@@ -43,8 +43,8 @@ $ Enter your command: gnome-calculator -e 2+3
 $ Enter your command: exit
 ```
 
-## PSHELL
-Task D is an extension of **SHELL**. Add a built-in command `showjobs` which will show pids of all background processes only if they are still running. Give `pshell.c` name to your program.
+## 4. PSHELL
+This problems extends the **SHELL** of the previous problem. Add a built-in command `showjobs` which will show pids of all background processes only if they are still running. Give `pshell.c` name to your program.
 ```
 $ gcc pshell.c -o pshell
 $ ./pshell
@@ -56,7 +56,7 @@ $ Enter your command: showjobs
 $ Enter your command: exit
 ```
 
-## \*DOMATH the Linux Way (not for Mac users)
+## \*5. DOMATH the Linux Way (not for Mac users)
 
 This task is optional.
 
