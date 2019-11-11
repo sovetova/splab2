@@ -20,8 +20,8 @@ int main(int argc, char* argv[]){
 	do {
 		printf("$ Enter your command: ");
 		fgets(s, 1000, stdin);
-		char *pch = strtok(input, "\n");
-		t[2] = input;
+		char *pch = strtok(s, "\n");
+		t[2] = s;
 
 		if(strcmp(pch, "exit") == 0){
 		break;
@@ -31,7 +31,7 @@ int main(int argc, char* argv[]){
 		}		
 		pid_t p = fork();
 		if (p == 0){
-			execvp(t[0], arr);
+			execvp(t[0], t);
 		}
 		waitpid(p, NULL,0);
 	}
